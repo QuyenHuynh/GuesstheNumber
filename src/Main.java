@@ -38,7 +38,7 @@ public class Main {
     public static void startGame(){
         System.out.printf("Well, %s, I am thinking of a number between 1 and 20.%n", name);
         System.out.println("Take a guess.");
-        System.out.println("Debug session: The random number is... " + randomNumber);
+//        System.out.println("Debug session: The random number is... " + randomNumber);
 
         Scanner scan = new Scanner(System.in);
         int guess = 0;
@@ -51,11 +51,11 @@ public class Main {
 
                     if (guess > randomNumber) {
                         System.out.println("That's too high. Try again.");
-                        System.out.println("Debug session: The random number is... " + randomNumber);
+//                        System.out.println("Debug session: The random number is... " + randomNumber);
                     }
                     if (guess < randomNumber) {
                         System.out.println("That's too low. Try again.");
-                        System.out.println("Debug session: The random number is... " + randomNumber);
+//                        System.out.println("Debug session: The random number is... " + randomNumber);
                     }
                     if (guess == randomNumber) {
                         victory = true;
@@ -69,11 +69,11 @@ public class Main {
                     }
                 } else {
                     System.out.println("Your guess is out of range! (1-20)");
-                    System.out.println("Debug session: The random number is... " + randomNumber);
+//                    System.out.println("Debug session: The random number is... " + randomNumber);
                 }
             } catch (InputMismatchException e) {
              System.out.println("Your guess is not a number. Try again! (1-20)");
-             System.out.println("Debug session: The random number is... " + randomNumber);
+//             System.out.println("Debug session: The random number is... " + randomNumber);
              scan.next();
             }
         }
