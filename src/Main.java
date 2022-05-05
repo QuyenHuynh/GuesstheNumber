@@ -118,6 +118,9 @@ public class Main {
                 System.out.println("Not a valid answer. Please enter 'y' or 'n'");
                 throw new CustomException();
             }
+        } else {
+            System.out.println("Input is blank. Would you like to play again? Please enter 'y' or 'n'");
+            throw new CustomException();
         }
         validPlayAgain = true;
     }
