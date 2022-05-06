@@ -11,6 +11,8 @@ public class Main {
     static int max = 20;
     static int range = max - min + 1;
     static int randomNumber = (int) (Math.random() * range) + min;
+
+    static int guess = 0;
     static int numOfGuesses = 0;
     static String playAgain = "";
     static boolean validPlayAgain = false;
@@ -41,7 +43,7 @@ public class Main {
 //        System.out.println("Debug session: The random number is... " + randomNumber);
 
         Scanner scan = new Scanner(System.in);
-        int guess = 0;
+        guess = 0;
 
         while (!victory || guess != randomNumber) {
             try {
@@ -99,7 +101,8 @@ public class Main {
         randomNumber = (int) (Math.random() * range) + min;
         numOfGuesses = 0;
         playAgain = "";
-        startGame();
+        validPlayAgain = false;
+        guess = 0;
     }
 
     static void validPlayAgainCheck(String playAgain) throws CustomException {
@@ -110,6 +113,7 @@ public class Main {
                 validPlayAgain = true;
                 System.out.println("Hooray!");
                 resetGame();
+                startGame();
             } else if (playAgain.equals("n") || playAgain.equals("N")) {
                 validPlayAgain = true;
                 System.out.println("Goodbye!");
