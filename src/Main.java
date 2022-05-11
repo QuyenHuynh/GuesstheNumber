@@ -11,7 +11,6 @@ public class Main {
     static int max = 20;
     static int range = max - min + 1;
     static int randomNumber = (int) (Math.random() * range) + min;
-
     static int guess = 0;
     static int numOfGuesses = 0;
     static String playAgain = "";
@@ -74,7 +73,7 @@ public class Main {
 //                    System.out.println("Debug session: The random number is... " + randomNumber);
                 }
             } catch (InputMismatchException e) {
-             System.out.println("Your guess is not a number. Try again! (1-20)");
+             System.out.println("Your guess is not valid. Try again! (1-20)");
 //             System.out.println("Debug session: The random number is... " + randomNumber);
              scan.next();
             }
@@ -106,7 +105,6 @@ public class Main {
     }
 
     static void validPlayAgainCheck(String playAgain) throws CustomException {
-
 //        check for empty string
         if (playAgain != null && playAgain.length() > 0) {
             if (playAgain.equals("y") || playAgain.equals("Y")) {
